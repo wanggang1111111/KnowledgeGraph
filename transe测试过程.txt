@@ -1,0 +1,20 @@
+for test_triples
+       for entitys
+                 替换头实体，并进行打分排序=>rank_head_sorted
+                 替换尾实体，并进行打分排序=>rank_head_sorted
+       for rank_head_sorted
+                 if（被替换的头实体在打分排序前十）{
+                           hit++；
+                 }
+                           rank_sum+i+1
+       for rank_tail_sorted
+                 if（被替换的尾实体在打分排序前十）{
+                            hit++；
+                 }
+                           rank_sum+i+1
+       step+=1；
+
+hit10=hits/2*len(test_triples);
+mean_rank=rank_sum/2*len(test_triples);
+
+针对关系的预测同理
